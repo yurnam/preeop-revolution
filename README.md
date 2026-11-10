@@ -1,4 +1,4 @@
-# EOP · PEOP · REOP · PREEOP
+# EOP · PEOP · REOP · PROEP
 
 > **If it works, throw an exception. If it still works, recurse. If it still works, make it parallel.**
 
@@ -13,7 +13,7 @@ These are **satirical experimental programming styles**, not production recommen
 | **EOP** | Exception-Oriented Programming | Exceptions are instructions, not errors. |
 | **PEOP** | Parallel Exception-Oriented Programming | Raise and handle independent exceptions concurrently. |
 | **REOP** | Recursion-Oriented Programming | Every business operation must recurse before doing useful work. |
-| **PREEOP** | Parallel Recursion-Oriented Exceptionist Programming | Combine all of the above, and require 40 live exception-handler levels before conventional Python work. |
+| **PROEP** | Parallel Recursion-Oriented Exceptionist Programming | Combine all of the above, and require 40 live exception-handler levels before conventional Python work. |
 
 ## Quick start
 
@@ -23,14 +23,14 @@ Requires **Python 3.10+**. No third-party dependencies.
 python examples/eop.py
 python examples/peop.py
 python examples/reop.py
-python examples/preeop.py
+python examples/proep.py
 python -m unittest discover -s tests -v
 ```
 
-Expected PREEOP result:
+Expected PROEP result:
 
 ```text
-PREEOP result: [42, 200]
+PROEP result: [42, 200]
 ```
 
 ## Example: ordinary code vs. EOP
@@ -57,7 +57,7 @@ except Multiply as instruction:
 2. **Only exception subclasses may be defined using ordinary top-level `class` syntax.**
 3. **Ordinary class and function definitions belong inside an exception subclass's `__init__` method.** They must be nested inside a `try`/`except` sequence that raises and catches an instance of that **same exception type**; the inner instance uses a termination flag to prevent infinite recursion.
 4. **No ordinary class or function definitions in application-level `except` blocks.** Retrieve the definitions produced by exception constructors instead.
-5. **40-level rule:** PREEOP business operations require at least 40 simultaneously active exception-handler levels. These are obtained with exception-guided recursive calls, not with 40 statically nested `try` blocks (which CPython may reject).
+5. **40-level rule:** PROEP business operations require at least 40 simultaneously active exception-handler levels. These are obtained with exception-guided recursive calls, not with 40 statically nested `try` blocks (which CPython may reject).
 6. **Recursive execution:** Business-operation entrypoints recurse before doing useful work.
 7. **Parallel execution:** Independent tasks may raise exceptions on separate threads or processes. Each worker must catch its own exceptions.
 8. **Exception batching:** Sequential lists of exceptions are permitted (one `try`/`except` per iteration).
@@ -70,12 +70,12 @@ Read the detailed [specification](docs/specification.md) and [design limitations
 - [`examples/eop.py`](examples/eop.py): imports, object creation, and arithmetic raised as exceptions.
 - [`examples/peop.py`](examples/peop.py): independent exceptional workers via `threading`.
 - [`examples/reop.py`](examples/reop.py): recursion required before useful work.
-- [`examples/preeop.py`](examples/preeop.py): the full spectacularly inefficient combination.
+- [`examples/proep.py`](examples/proep.py): the full spectacularly inefficient combination.
 
-## PREEOPS — the only metric that matters
+## PROEPS — the only metric that matters
 
 ```text
-PREEOPS = exceptions raised / useful operations completed
+PROEPS = exceptions raised / useful operations completed
 ```
 
 Higher is more philosophically pure. Lower is more employable.
