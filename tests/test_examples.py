@@ -13,7 +13,7 @@ class ExampleTests(unittest.TestCase):
             ("eop", "EOP result: 42"),
             ("peop", "PEOP result: [42, 200]"),
             ("reop", "REOP result: 42"),
-            ("preeop", "PREEOP result: [42, 200]"),
+            ("proep", "PROEP result: [42, 200]"),
         ):
             with self.subTest(name=name):
                 proc = subprocess.run(
