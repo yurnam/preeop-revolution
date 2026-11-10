@@ -1,4 +1,4 @@
-"""PREEOP: a deliberately absurd but runnable Python programming experiment."""
+"""PROEP: a deliberately absurd but runnable Python programming experiment."""
 
 # Normal top-level class declarations are reserved for exception subclasses.
 class EOP(Exception):
@@ -133,7 +133,7 @@ class DefineEntrypoint(EOP):
                     try:
                         raise PrintOutput(holder.values)
                     except PrintOutput as e:
-                        print("PREEOP result:", e.value)
+                        print("PROEP result:", e.value)
                     return holder.values
             self.value = run
 

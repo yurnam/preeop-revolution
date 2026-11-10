@@ -29,13 +29,13 @@ These rules describe an intentionally inconvenient Python coding discipline, not
 - **REOP-003:** Recursion is bounded by a mandatory base case.
 - **REOP-004:** Tail-call optimization is philosophically discouraged.
 
-## PREEOP — Parallel Recursion-Oriented Exceptionist Programming
+## PROEP — Parallel Recursion-Oriented Exceptionist Programming
 
-- **PREEOP-001:** All prior rules apply.
-- **PREEOP-002:** At least 40 **live nested exception-handler levels** are required for ordinary business operations. Sequentially catching 40 exceptions is not the same as maintaining 40 active handler frames.
-- **PREEOP-003:** Recursive calls from a live exception handler may build the 40-level chain. Structural recursion used to enter the gate is an explicit bootstrap allowance.
-- **PREEOP-004:** At level 40, actual imports, object instantiation, method invocation, arithmetic, and printing must still originate from the appropriate custom exception.
-- **PREEOP-005:** A single initial entrypoint call is permitted for bootstrap; it should itself be obtained via a self-catching definition exception.
+- **PROEP-001:** All prior rules apply.
+- **PROEP-002:** At least 40 **live nested exception-handler levels** are required for ordinary business operations. Sequentially catching 40 exceptions is not the same as maintaining 40 active handler frames.
+- **PROEP-003:** Recursive calls from a live exception handler may build the 40-level chain. Structural recursion used to enter the gate is an explicit bootstrap allowance.
+- **PROEP-004:** At level 40, actual imports, object instantiation, method invocation, arithmetic, and printing must still originate from the appropriate custom exception.
+- **PROEP-005:** A single initial entrypoint call is permitted for bootstrap; it should itself be obtained via a self-catching definition exception.
 
 ## Terminology
 
